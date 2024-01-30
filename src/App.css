@@ -1,38 +1,27 @@
-.App {
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+  @apply font-sans;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  @apply flex flex-col items-center justify-center h-screen;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  @apply text-3xl font-bold text-gray-800 bg-blue-500 p-4; /* Add bg-blue-500 for blue background and padding */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.image-container {
+  @apply flex justify-around mt-8;
 }
 
-.App-link {
-  color: #61dafb;
+.image-container img {
+  @apply w-52 h-52 rounded-md m-2;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
